@@ -12,5 +12,5 @@ for i = 1 : size(h,1)
     end
 end
 
-h=h/sum(sum(sum(h)))
+h=h/sum(sum(sum(h)));
 

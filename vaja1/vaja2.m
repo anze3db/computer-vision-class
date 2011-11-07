@@ -1,5 +1,6 @@
 % a)
-img = rgb2gray(imread("data/graf.png"));
+%img = rgb2gray(imread("data/graf.png"));
+img = imread("data/phone2.jpg");
 
 [h,w] = size(img) ;
 img1D = reshape(img,w*h,1);
@@ -20,10 +21,10 @@ subplot(1,3,3); bar(myhist(img1D,40));
 img = double(imread("data/graf.png"));
 img(:,:,1) = (img(:,:,1)./(img(:,:,1).+img(:,:,2).+img(:,:,3))*255); % img_g
 img(:,:,2) = (img(:,:,2)./(img(:,:,1).+img(:,:,2).+img(:,:,3))*255); % img_r
-img(:,:,3) = zeros(size(img,1),size(img,2)); % img_b
+img(:,:,3) = zeros(size(img,1),size(img,2)); % img_b - needed for the imshow function
 img= uint8(img);
 figure(3); clf; imshow(img);
-plot(myhist2RG(img,10))
+figure(4); clf; mesh(myhist2RG(img,10));
 
 
 
