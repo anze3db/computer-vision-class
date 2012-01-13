@@ -1,0 +1,3 @@
+function D = descriptors_maglap(img, px, py, m, bins)
+
+

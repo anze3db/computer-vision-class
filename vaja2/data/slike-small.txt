@@ -1,0 +1,2 @@
+data/slike/obj100__0.png
+data/slike/obj10__0.png
